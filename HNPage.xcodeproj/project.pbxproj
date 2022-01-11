@@ -58,16 +58,24 @@
 		FC347997278D65D80060E220 /* HNPage */ = {
 			isa = PBXGroup;
 			children = (
-				FC347998278D65D80060E220 /* AppDelegate.swift */,
-				FC34799A278D65D80060E220 /* SceneDelegate.swift */,
+				FC3479AF278D663C0060E220 /* Support Files */,
 				FC34799C278D65D80060E220 /* ViewController.swift */,
 				FC34799E278D65D80060E220 /* Main.storyboard */,
-				FC3479A4278D65DA0060E220 /* Assets.xcassets */,
 				FC3479A6278D65DA0060E220 /* LaunchScreen.storyboard */,
-				FC3479A9278D65DA0060E220 /* Info.plist */,
 				FC3479A1278D65D80060E220 /* HNPage.xcdatamodeld */,
 			);
 			path = HNPage;
+			sourceTree = "<group>";
+		};
+		FC3479AF278D663C0060E220 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC3479A9278D65DA0060E220 /* Info.plist */,
+				FC347998278D65D80060E220 /* AppDelegate.swift */,
+				FC34799A278D65D80060E220 /* SceneDelegate.swift */,
+				FC3479A4278D65DA0060E220 /* Assets.xcassets */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
