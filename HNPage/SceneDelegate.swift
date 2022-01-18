@@ -5,18 +5,23 @@
 //  Created by hainuo on 2022/1/11.
 //
 
+import LCDSDK
+import RangersAppLog
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard (scene as? UIWindowScene) != nil else { return }
+
+//        window = UIWindow(windowScene: windoScene)
+
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.setWindow(window: window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -34,11 +39,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+        LCDManager.stopOpenGLESActivity()
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        LCDManager.startOpenGLESActivity()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -50,6 +57,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        for context in URLContexts {
+            let url = context.url
+            if BDAutoTrackSchemeHandler.shared().handle(url, appID: appId, scene: scene) {
+                continue
+            }
+        }
+    }
 }
-

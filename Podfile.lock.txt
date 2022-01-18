@@ -1,0 +1,157 @@
+PODS:
+  - Ads-CN (4.2.0.2):
+    - Ads-CN/BUAdSDK (= 4.2.0.2)
+  - Ads-CN/BUAdSDK (4.2.0.2):
+    - Ads-CN/BUFoundation
+    - Ads-CN/Domestic
+  - Ads-CN/BUFoundation (4.2.0.2)
+  - Ads-CN/Domestic (4.2.0.2)
+  - Alamofire (5.5.0)
+  - BDNovelOpenSDK (3.6.1):
+    - FMDB/standard
+    - MMKV
+    - OneKit/ByteDanceKit
+    - RangersAPM/Core (~> 2.4.1)
+    - RangersAPM/Crash (~> 2.4.1)
+    - RangersAPM/HMD (~> 2.4.1)
+    - RangersAPM/Public (~> 2.4.1)
+    - RangersAppLog/Core (~> 6.3.2)
+    - RangersAppLog/Host/CN (~> 6.3.2)
+    - YYCache
+    - YYText
+  - CoreStore (8.1.0)
+  - FMDB/standard (2.7.5)
+  - HandyJSON (5.0.2)
+  - MBProgressHUD (1.2.0)
+  - MMKV (1.2.11):
+    - MMKVCore (~> 1.2.11)
+  - MMKVCore (1.2.11)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - OneKit/BaseKit (1.1.40)
+  - OneKit/ByteDanceKit (1.1.40):
+    - OneKit/ByteDanceKit/Foundation (= 1.1.40)
+    - OneKit/ByteDanceKit/UIKit (= 1.1.40)
+  - OneKit/ByteDanceKit/Foundation (1.1.40)
+  - OneKit/ByteDanceKit/UIKit (1.1.40):
+    - OneKit/ByteDanceKit/Foundation
+  - OneKit/Database (1.1.40):
+    - OneKit/Service
+  - OneKit/Reachability (1.1.40):
+    - OneKit/Service
+  - OneKit/Service (1.1.40)
+  - OneKit/StartUp (1.1.40):
+    - OneKit/BaseKit
+    - OneKit/Reachability
+    - OneKit/Service
+  - Pangrowth/media-dynamic (1.8.0.0):
+    - PangrowthMedia-dynamic (= 3.1.2.0)
+    - RangersAPM/CN (= 2.4.1)
+    - RangersAPM/Core (= 2.4.1)
+    - RangersAPM/Crash (= 2.4.1)
+    - RangersAPM/EventMonitor (= 2.4.1)
+    - RangersAPM/HMD (= 2.4.1)
+    - RangersAPM/Public (= 2.4.1)
+    - RangersAppLog/Core (= 6.3.2)
+    - RangersAppLog/Host/CN (= 6.3.2)
+  - Pangrowth/novel (1.8.0.0):
+    - BDNovelOpenSDK (= 3.6.1)
+    - RangersAPM/CN (= 2.4.1)
+    - RangersAPM/Core (= 2.4.1)
+    - RangersAPM/Crash (= 2.4.1)
+    - RangersAPM/EventMonitor (= 2.4.1)
+    - RangersAPM/HMD (= 2.4.1)
+    - RangersAPM/Public (= 2.4.1)
+    - RangersAppLog/Core (= 6.3.2)
+    - RangersAppLog/Host/CN (= 6.3.2)
+  - PangrowthMedia-dynamic (3.1.2.0):
+    - RangersAPM/Core (>= 2.4.1)
+    - RangersAPM/Crash (>= 2.4.1)
+    - RangersAPM/EventMonitor (>= 2.4.1)
+    - RangersAPM/HMD (>= 2.4.1)
+    - RangersAPM/Public (>= 2.4.1)
+    - RangersAppLog/Core (~> 6.3.2)
+    - RangersAppLog/Host/CN (~> 6.3.2)
+    - RangersAppLog/Log (~> 6.3.2)
+  - RangersAPM/CN (2.4.1):
+    - RangersAPM/Core
+    - RangersAPM/Public
+  - RangersAPM/Core (2.4.1):
+    - OneKit/BaseKit (>= 1.1.19)
+  - RangersAPM/Crash (2.4.1):
+    - RangersAPM/Core
+    - RangersAPM/HMD
+    - RangersAPM/Public
+  - RangersAPM/EventMonitor (2.4.1):
+    - RangersAPM/Core
+    - RangersAPM/HMD
+    - RangersAPM/Public
+  - RangersAPM/HMD (2.4.1):
+    - OneKit/Database (>= 1.1.19)
+    - RangersAPM/Core
+  - RangersAPM/Public (2.4.1):
+    - RangersAPM/Core
+  - RangersAppLog/Core (6.3.2):
+    - OneKit/BaseKit
+    - OneKit/StartUp
+  - RangersAppLog/Host/CN (6.3.2):
+    - RangersAppLog/Core
+  - RangersAppLog/Log (6.3.2):
+    - RangersAppLog/Core
+  - YYCache (1.0.4)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - Ads-CN (~> 4.2.0.0)
+  - CoreStore (~> 8.0)
+  - HandyJSON (~> 5.0.2)
+  - MBProgressHUD (~> 1.2.0)
+  - Moya (~> 14.0)
+  - Pangrowth/media-dynamic (= 1.8.0.0)
+  - Pangrowth/novel (= 1.8.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Ads-CN
+    - Alamofire
+    - CoreStore
+    - FMDB
+    - HandyJSON
+    - MBProgressHUD
+    - MMKV
+    - MMKVCore
+    - Moya
+    - YYCache
+    - YYText
+  https://github.com/volcengine/volcengine-specs.git:
+    - BDNovelOpenSDK
+    - OneKit
+    - Pangrowth
+    - PangrowthMedia-dynamic
+    - RangersAPM
+    - RangersAppLog
+
+SPEC CHECKSUMS:
+  Ads-CN: 9fe60236f2433ea9091842729ea2c93c3bc84134
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  BDNovelOpenSDK: b4f4987f6f1fae15cd1a7bad4fe2e3048afb77c4
+  CoreStore: 497ade3103f1ffd95d09c2658f9008d10c7d3082
+  FMDB: 89f705eb43d6a2af8795a9d0b4613e03f33fb7ba
+  HandyJSON: b3674b4faf44f867612c2c2f5c44759026cd3103
+  MBProgressHUD: 4acba3cb8da37dc157aaf5a5dfa53045b90c7c52
+  MMKV: 217b643c181c3d2f71983206ca1972d0a6e99881
+  MMKVCore: f9e4f56742fdebbd042f7a273e278927f182cee7
+  Moya: b394c8258074848a56a6f7406534709825a6d41a
+  OneKit: f874c580390ee2be6b9d27e5ccae10ee4f7c503d
+  Pangrowth: 21e4ddfdc1a909379d7303212726815c73b072be
+  PangrowthMedia-dynamic: 1a0df9343174e5e703c7fb24416617181c4602db
+  RangersAPM: fbcba8c380e5513f46486ed9f94f57feb6840a37
+  RangersAppLog: d2eca818b509a6b6d1bc28b95266baf6b0fe4cb2
+  YYCache: 5eadab13c6e585b65bc66fa537b8d946106b4cd6
+  YYText: 23b00e89de6f7aae8a819627a12d4ba96889ece5
+
+PODFILE CHECKSUM: 567940baf2a624a490f5da65f2585d30ce13f721
+
+COCOAPODS: 1.11.2
