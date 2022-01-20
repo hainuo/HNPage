@@ -36,6 +36,12 @@ class FeedTVC: UITableViewController {
 //        let centerFrom = categoryName == "__all__" ? kLCDNativeTrackEnterFrom_click_headline : kLCDNativeTrackEnterFrom_click_category
         // TODO: 需要埋点上报
 
+        LCDFeedNativeLoadManager.loadNativeModels(withCategory: "__all__") { nativeModels, extra, error in
+            print(" ==== ", nativeModels as Any)
+            print(" ==== ", extra as Any)
+            print(" ==== ", error as Any)
+        }
+
         LCDFeedNativeLoadManager.loadNativeModels(withCategory: categoryName) { [weak self] nativeModels, extra, error in
             guard let nativeModels = nativeModels else {
                 self?.myDebug("没有获取到数据 ")

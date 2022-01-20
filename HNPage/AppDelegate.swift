@@ -53,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.appID = NR_AppId
         config.appName = NR_AppName
         config.channel = "App Store"
-        config.abEnable = false
         #if DEBUG
         config.showDebugLog = true
         config.logger = { log in

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CF4D492CC7C4C79AF689F794 /* Pods_HNPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7280E9C85A115925D28F1EF /* Pods_HNPage.framework */; };
+		FC2B3F1F2796A3540050C157 /* FeedExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B3F1E2796A3540050C157 /* FeedExploreVC.swift */; };
+		FC2B3F212796AA300050C157 /* FeedSingleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B3F202796AA300050C157 /* FeedSingleVC.swift */; };
+		FC2B3F232796B9910050C157 /* NovelEntranceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2B3F222796B9910050C157 /* NovelEntranceVC.swift */; };
 		FC347999278D65D80060E220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC347998278D65D80060E220 /* AppDelegate.swift */; };
 		FC34799D278D65D80060E220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34799C278D65D80060E220 /* ViewController.swift */; };
 		FC3479A3278D65D80060E220 /* HNPage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC3479A1278D65D80060E220 /* HNPage.xcdatamodeld */; };
@@ -34,6 +37,9 @@
 		08ADA2DDD73EB1280AC64621 /* Pods-HNPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNPage.release.xcconfig"; path = "Target Support Files/Pods-HNPage/Pods-HNPage.release.xcconfig"; sourceTree = "<group>"; };
 		CD0CD9B496FEE3C323E79EEF /* Pods-HNPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNPage.debug.xcconfig"; path = "Target Support Files/Pods-HNPage/Pods-HNPage.debug.xcconfig"; sourceTree = "<group>"; };
 		E7280E9C85A115925D28F1EF /* Pods_HNPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2B3F1E2796A3540050C157 /* FeedExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedExploreVC.swift; sourceTree = "<group>"; };
+		FC2B3F202796AA300050C157 /* FeedSingleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSingleVC.swift; sourceTree = "<group>"; };
+		FC2B3F222796B9910050C157 /* NovelEntranceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelEntranceVC.swift; sourceTree = "<group>"; };
 		FC347995278D65D80060E220 /* HNPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC347998278D65D80060E220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC34799C278D65D80060E220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				FCD06ECE27952C7800767ABE /* FeedTVC.swift */,
+				FC2B3F1E2796A3540050C157 /* FeedExploreVC.swift */,
+				FC2B3F202796AA300050C157 /* FeedSingleVC.swift */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				FCED6C8E278FF12D006187CA /* NovelTVC.swift */,
+				FC2B3F222796B9910050C157 /* NovelEntranceVC.swift */,
 			);
 			path = Novel;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 				C90E3516922D23F846210392 /* [CP] Check Pods Manifest.lock */,
 				FC347991278D65D80060E220 /* Sources */,
 				FC347992278D65D80060E220 /* Frameworks */,
+				FC779F912797BBB6006EA885 /* ShellScript */,
 				FC347993278D65D80060E220 /* Resources */,
 				A60C287CD534F9DD961EE6CA /* [CP] Embed Pods Frameworks */,
 				4AFCEF792AB9ABCD92C90657 /* [CP] Copy Pods Resources */,
@@ -328,6 +338,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FC779F912797BBB6006EA885 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n\n# APMInsight SDK资源文件路径，$PODS_ROOT是工程的Pods根路径，如果没有使用Cocoapods请修改此路径\nAPMSDKAssetCrashPath=\"${PODS_ROOT}/RangersAPM/RangersAPM/Assets/Crash\"\naddressRangeFileName=\"${APMSDKAssetCrashPath}/APMInsightCrash.bundle/APMInsightSDKAddressRange.plist\"\n\n# 每次执行脚本前，删除</dict>之后的所有行，输出地址后再补充token，需要确保plist中只有一层Dict\n# 为什么不每次直接重新写plist头，覆盖之前的？多架构时会覆盖之前的架构\n# 有可能存在中断编译导致写的plist文件格式错误，这里判断一下\nplistLineNum=0\nkeysLineNum=()\narrayStartLineNum=()\narrayEndLineNum=()\nwhile read line\ndo\n    ((plistLineNum++))\n\n    if [[ $line =~ \"<key>\" ]]; then\n        keysLineNum[${#keysLineNum[@]}]=$plistLineNum\n    elif [[ $line =~ \"<array>\" ]]; then\n        arrayStartLineNum[${#arrayStartLineNum[@]}]=$plistLineNum\n    elif [[ $line =~ \"</array>\" ]]; then\n        arrayEndLineNum[${#arrayEndLineNum[@]}]=$plistLineNum\n    fi\ndone < \"${addressRangeFileName}\"\n\nerrorCount=$[${#keysLineNum[@]}-${#arrayEndLineNum[@]}]\nif [[ ${errorCount} -gt 0 ]]; then\n    errorLineNum=${keysLineNum[$[${#keysLineNum[@]}-${errorCount}]]}\n    sed -i \"\" \"${errorLineNum},\\$d\" \"${addressRangeFileName}\"\nelse\n    sed -i \"\" '/^<\\/dict>/,$d' \"${addressRangeFileName}\"\nfi\n\n# 合并地址区间 Private 不要手动调用此方法\n# $1:InputFile $2:OutputFile\n# 原方案合并区间时，每次用上一次记录的 起地址与大小求和 与 当前的起地址 比较，计算量较大，性能较差\n# 新方案在过滤SDK symbols时同时输出行号，每次比较时判断行号是否连续即可。\n# Tips：LinkMap Symbols中行号连续的地址一定是连续的。\nfunction combineAddresses(){\n    lastLineNum=\"0000\"\n    startAddress=\"0x0000\"\n    lastAddr=\"0x0000\"\n    lastSize=\"0x0000\"\n    while read line\n    do\n        read tmpLineNum tmpAddr tmpSize <<< $(echo $(echo ${line} | awk -F \"[: ]\" '{print $1\" \"$2\" \"$3}'))\n\n        if [[ \"${lastLineNum}\" == \"0000\" ]]; then\n            startAddress=${tmpAddr}\n        else\n            if [[ ! \"${tmpLineNum}\" == \"$[${lastLineNum}+1]\" ]]; then\n                endAddress=`printf \"0x%08x\" $((${lastAddr}+${lastSize}))`\n                echo \"${lastLineNum}:${startAddress} ${endAddress}\" >> \"$2\"\n                startAddress=${tmpAddr}\n            fi\n        fi\n\n        lastLineNum=${tmpLineNum}\n        lastAddr=${tmpAddr}\n        lastSize=${tmpSize}\n    done < \"$1\"\n\n    if [[ ! \"${startAddress}\" == \"0x0000\"  ]];\n    then\n        endAddress=`printf \"0x%08x\" $((${lastAddr}+${lastSize}))`\n        echo \"${lastLineNum}:${startAddress} ${endAddress}\" >> \"$2\"\n    fi\n\n}\n\n# 处理LinkMapFile，获取SDK地址区间 Private 不要手动调用此方法\n# $1:SDKName $2:SDKAid $3:LinkMapFilePath $4:CPUArchitecture\nfunction writeAddressRangeFileFromLinkMap(){\n\n    if [[ ! -f \"$3\" ]]; then\n        echo \"LinkMap for $4 not found!!!\"\n        return\n    fi\n\n    OBJSTART=`date +%s`;\n\n    # 保存SDK的object files\n    objectFile=\"${APMSDKAssetCrashPath}/APMInsightSDKAddressRangeTmp1.txt\"\n    if [[ -f \"$objectFile\" ]]; then\n        rm \"${objectFile}\"\n    fi\n    touch \"${objectFile}\"\n\n    grep -E \"^\\[.*\\].*\\/($1)\\/.*\" $3 >> \"${objectFile}\"\n\n    OBJEND=`date +%s`;\n    OBJTime=$((OBJEND-OBJSTART))\n    echo \"Grep object files cost $OBJTime s\"\n\n    # 保存SDK的Symbols\n    symbolFile=\"${APMSDKAssetCrashPath}/APMInsightSDKAddressRangeTmp2.txt\"\n    if [[ -f \"$symbolFile\" ]]; then\n        rm \"${symbolFile}\"\n    fi\n    touch \"${symbolFile}\"\n\n    # 过滤出Symbols\n    symbolsLineNum=$(grep -E -n \"# Symbols:\" $3 | head -1 | cut -d \":\" -f 1)\n    deadLineNum=$(grep -E -n \"# Dead Stripped Symbols:\" $3 | head -1 | cut -d \":\" -f 1)\n\n    allSymbols=\"${APMSDKAssetCrashPath}/APMInsightSDKAddressAllSymbols.txt\"\n    if [[ -f \"${allSymbols}\" ]]; then\n        rm \"${allSymbols}\"\n    fi\n    touch \"${allSymbols}\"\n\n    symbolTempFile=\"${APMSDKAssetCrashPath}/APMInsightSDKAddressRangeSymbolTemp.txt\"\n    if [[ -f \"${symbolTempFile}\" ]]; then\n        rm \"${symbolTempFile}\"\n    fi\n    touch \"${symbolTempFile}\"\n\n    sed -n \"${symbolsLineNum},${deadLineNum}p\" $3 > ${allSymbols}\n\n    # 过滤掉 \"literal string:\" \"CFString\" \"objc-cat-list\" \"pointer-to-literal-cstring\" \"_OBJC_IVAR_$_\"\n    grep -v \"0x.*0x.*(literal\\sstring\\:.?|CFString|objc-cat-list|pointer-to-literal-cstring|_OBJC_IVAR_\\$_.*)\" ${allSymbols} > ${symbolTempFile}\n\n    rm \"${allSymbols}\"\n\n    TEXTEND=`date +%s`;\n    TEXTTime=$((TEXTEND-OBJEND))\n    echo \"Grep text section cost $TEXTTime s\"\n\n    # 根据Object file的序号查找symbols\n    regular=\"0000\"\n    count=0\n    while read line\n    do\n        # 拼接的正则表达式过长会导致grep内存溢出\n        count=$[count+1]\n        if [[ $count -ge 500 ]]; then\n            regular=\"${regular})\\]\"\n            grep -E -n \"${regular}\" ${symbolTempFile} >> $symbolFile\n            regular=\"0000\"\n            count=0\n        fi\n\n        serial=`echo ${line} | cut -d \"]\" -f 1 | cut -b 2-`\n        if [[ \"${regular}\" == \"0000\" ]]; then\n            regular=\"0x.*0x.*\\[(\\s?${serial}\"\n        else\n            regular=\"${regular}|\\s?${serial}\"\n        fi\n    done < $objectFile\n    regular=\"${regular})\\]\"\n    grep -E -n \"${regular}\" ${symbolTempFile} >> $symbolFile\n\n    SYBEND=`date +%s`;\n    SYBTime=$((SYBEND-TEXTEND))\n    echo \"Grep SDK symbols cost $SYBTime s\"\n\n    rm \"${symbolTempFile}\"\n\n    # 筛选SDK symbols时导致部分顺序错乱，为了更好地进行地址合并，先排序\n    sort -n -k 1 -t : $symbolFile -o $symbolFile\n\n    SORTEND=`date +%s`;\n    SORTTime=$((SORTEND-SYBEND))\n    echo \"sort SDK symbols cost $SORTTime s\"\n\n    if [[ -f \"${objectFile}\" ]]; then\n        rm \"${objectFile}\"\n    fi\n\n    # 读取文件，合并相邻地址范围，精简结果文件\n    # 判断之前是否写过此种架构，如果写过，先删除这些行\n    startLineNum=0\n    endLineNum=0\n    tempLineNum=0\n    while read line\n    do\n        ((tempLineNum++))\n        if [ \"${line}\" == \"<key>${2}_${4}</key>\" ]\n        then\n            startLineNum=$tempLineNum\n            continue\n        fi\n\n        if [ ! \"$startLineNum\" == 0 ]\n        then\n            if [ \"${line}\" == \"</array>\" ]\n            then\n                endLineNum=$tempLineNum\n                break\n            fi\n        fi\n    done < \"${addressRangeFileName}\"\n    sed -i \"\" \"$startLineNum,${endLineNum}d\" \"${addressRangeFileName}\"\n\n    # 写入plist数组头\n    echo \"<key>${2}_${4}</key>\n<array>\" >> \"${addressRangeFileName}\"\n\n    # 合并地址区间，把symbols拆分到多个文件，并发合并\n    threadCount=10 # 控制该变量可以改变并发量，由于脚本编写逻辑限制，不要超过26\n    linesCount=`awk 'END{print NR}' ${symbolFile}`\n    lineExceptThread=`awk 'BEGIN{printf \"%.2f\\n\",'$linesCount'/'$threadCount'}'`\n    linesCountPerFile=`echo $((${lineExceptThread//.*/+1}))`\n    cd $APMSDKAssetCrashPath\n    split -l ${linesCountPerFile} -a 1 ${symbolFile} AddressMergeTmp_\n\n    for ((i=0;i<${threadCount};i++))\n    do\n    {\n        suffixNum=$[i+97]\n        suffix=$(printf \\\\x`printf %x $suffixNum`)\n        if [[ -f \"AddressMergeTmp_${suffix}\" ]]; then\n            touch \"AddressMerge_$i\"\n            combineAddresses AddressMergeTmp_${suffix} AddressMerge_$i\n            rm \"AddressMergeTmp_${suffix}\"\n        fi\n    }&\n    done\n    wait\n\n    MERGEEND=`date +%s`;\n    MERGETime=$((MERGEEND-SORTEND))\n    echo \"Merge part cost $MERGETime s\"\n\n    startAddress=\"0x0000\"\n    endAddress=\"0x0000\"\n    for ((i=0;i<${threadCount};i++))\n    do\n    {\n        if [[ -f \"AddressMerge_$i\" ]]; then\n            while read line\n            do\n                read tmpStartAddr tmpEndAddr <<< $(echo $(echo ${line} | awk -F \"[: ]\" '{print $2\" \"$3}'))\n\n                if [ \"${startAddress}\" == \"0x0000\" ]\n                then\n                    startAddress=${tmpStartAddr}\n                    endAddress=${tmpEndAddr}\n                else\n                    if [[ $(echo \"${tmpStartAddr}\" | tr '[:upper:]' '[:lower:]') == $(echo \"${endAddress}\" | tr '[:upper:]' '[:lower:]') ]]\n                    then\n                        endAddress=${tmpEndAddr}\n                    else\n                        thisSize=`printf \"0x%08x\" $((${endAddress}-${startAddress}))`\n                        echo \"<string>${startAddress}+${thisSize}</string>\" >> \"${addressRangeFileName}\"\n                        startAddress=${tmpStartAddr}\n                        endAddress=${tmpEndAddr}\n                    fi\n                fi\n            done < \"AddressMerge_$i\"\n            rm \"AddressMerge_$i\"\n        fi\n    }\n    done\n    if [[ ! \"${startAddress}\" == \"0x0000\"  ]]\n    then\n        thisSize=`printf \"0x%08x\" $((${endAddress}-${startAddress}))`\n        echo \"<string>${startAddress}+${thisSize}</string>\" >> \"${addressRangeFileName}\"\n    fi\n\n    MERGEALLEND=`date +%s`;\n    MERGEALLTime=$((MERGEALLEND-MERGEEND))\n    echo \"Merge all cost $MERGEALLTime s\"\n\n    echo \"</array>\" >> \"${addressRangeFileName}\"\n\n    if [[ -f \"${symbolFile}\" ]]; then\n        rm \"${symbolFile}\"\n    fi\n\n}\n\n# Public 请调用此方法写入SDK地址区间\n# $1:SDKName $2:SDKAid\nfunction writeAddressRangeFile(){\n\n    if [[ -z \"$1\" ]] || [[ -z \"$2\" ]]; then\n        echo \"SDKName or SDKAid is empty, return\"\n        return\n    fi\n\n    START=`date +%s`;\n\n    # LINKMAP文件路径\n    if [[ $CURRENT_ARCH == \"undefined_arch\" ]]; then\n        LINKMAP_ARM64=${LD_MAP_FILE_PATH//${CURRENT_ARCH}/arm64}\n        LINKMAP_ARMV7=${LD_MAP_FILE_PATH//${CURRENT_ARCH}/armv7}\n\n        if [[ -z \"$LINKMAP_ARM64\" ]] && [[ -z \"$LINKMAP_ARMV7\" ]]; then\n            echo \"LINKMAP path is empty, return\"\n            return\n        fi\n\n        writeAddressRangeFileFromLinkMap $1 $2 $LINKMAP_ARM64 \"arm64\"\n\n        writeAddressRangeFileFromLinkMap $1 $2 $LINKMAP_ARMV7 \"armv7\"\n    else\n        LINKMAP=${LD_MAP_FILE_PATH}\n\n        if [[ -z \"$LINKMAP\" ]]; then\n            echo \"LINKMAP path is empty, return\"\n            return\n        fi\n\n        writeAddressRangeFileFromLinkMap $1 $2 $LINKMAP $CURRENT_ARCH\n    fi\n\n\n    echo \"SDK $2 write addressRange end\"\n    END=`date +%s`;\n    time=$((END-START))\n    echo \"SDK $2 cost ${time}s\"\n}\n\n# $SDKAid是在APMInsight平台上面申请的APPId，每个Aid输出一个addressRange文件，如果有多个Aid，请对每个Aid调用一次writeAddressRangeFile方法\n# 如果多个SDK归属于同一个aid，则$SDKName中使用'|'把这些SDKName分隔开，即SDKName=\"SDK1|SDK2|SDK3\"\nSDKAid=\"210361\"\nSDKName=\"BDNovelOpenSDK\"\nwriteAddressRangeFile $SDKName $SDKAid\n#在这里添加其他的writeAddressRangeFile方法调用\n#writeAddressRangeFile $SDKName $SDKAid\n\necho \"</dict></plist>\" >> \"${addressRangeFileName}\"\n\n/bin/sh ${PODS_ROOT}/RangersAPM/RangersAPM/APMInsight_DSYMUploader.sh \"210361\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -335,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2B3F1F2796A3540050C157 /* FeedExploreVC.swift in Sources */,
 				FCED6C91278FF245006187CA /* JiugonggeVC.swift in Sources */,
 				FCDB9C45278ED2BA00B8BF17 /* Model.swift in Sources */,
 				FCBA2BC827911E37006A2D9B /* VideoCardSingle.swift in Sources */,
@@ -348,9 +376,11 @@
 				FCBA2BCA27915C4C006A2D9B /* VideoCard.swift in Sources */,
 				FC3479A3278D65D80060E220 /* HNPage.xcdatamodeld in Sources */,
 				FCDB9C50278EF16B00B8BF17 /* MediaTVC.swift in Sources */,
+				FC2B3F212796AA300050C157 /* FeedSingleVC.swift in Sources */,
 				FCED6C8F278FF12D006187CA /* NovelTVC.swift in Sources */,
 				FCDB9C43278EBDE500B8BF17 /* Provider.swift in Sources */,
 				FCD06ECF27952C7800767ABE /* FeedTVC.swift in Sources */,
+				FC2B3F232796B9910050C157 /* NovelEntranceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +540,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_GENERATE_MAP_FILE = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,6 +574,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

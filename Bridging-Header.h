@@ -10,4 +10,5 @@
 #import <RangersAppLog/RangersAppLog.h>
 #import <RangersAppLog/BDAutoTrackSchemeHandler.h>
 #import <BDNovelOpenSDK/BDNovelPublicConfig+ReadConfig.h>
+#import <BDNovelOpenSDK/BDNovelEntrance.h>
 #endif /* Bridging_Header_h */
