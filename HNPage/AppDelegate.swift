@@ -78,7 +78,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if result {
                         if !(error != nil) {
                             print("注册成功了！")
-                            application.registerForRemoteNotifications()
+                            DispatchQueue.main.sync {
+                                application.registerForRemoteNotifications()
+                            }
                         }
                     } else {
                         print("用户不允许推送")
@@ -92,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // 已注册 已授权 --注册同志获取 token
                 // 请求授权时异步进行的，这里需要在主线程进行通知的注册
                 DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
+                    application.registerForRemoteNotifications()
                 }
 
             } else {}

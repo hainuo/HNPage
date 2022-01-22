@@ -18,4 +18,6 @@ target 'HNPage' do
   pod 'HandyJSON', '~> 5.0.2'
   
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod "PYSearch"
+  pod 'Kingfisher', '~> 7.0'
 end

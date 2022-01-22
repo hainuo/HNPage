@@ -5,6 +5,7 @@
 //  Created by hainuo on 2022/1/11.
 //
 
+import PYSearch
 import UIKit
 
 class ViewController: UIViewController {
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         TTNRType(name: "小说入口 -  热门小说", id: 13),
         TTNRType(name: "小说入口 -  feed小图 ", id: 14),
         TTNRType(name: "小说入口 -  feed大图", id: 15),
+        TTNRType(name: "小说搜索", id: 16),
         TTNRType(name: "多列信息流", id: 4),
         TTNRType(name: "单列信息流 - 热点", id: 5),
         TTNRType(name: "单列信息流 - 推荐", id: 6),
@@ -177,6 +179,46 @@ extension ViewController: UITableViewDelegate {
         } else if item.id == 15 {
             let vc = NovelEntranceVC()
             vc.type = .feedLarge
+            navigationController?.pushViewController(vc, animated: true)
+        } else if item.id == 16 {
+            let resultVc = NovelSearchResultVC()
+            let vc = PYSearchViewController(hotSearches: resultVc.hotSearchWords, searchBarPlaceholder: "请输入要搜索的影片名称，至少两个字") { searchVC, searchBar, searchText in
+                if let searchBar = searchBar {
+                    print(searchBar)
+                } else {
+                    print("没有searchbar")
+                }
+                if let searchVC = searchVC {
+                    print("视图隐藏状态", searchVC.view.isHidden ? "true" : "false")
+                } else {
+                    print("没有searchVC")
+                }
+
+                guard let searchText = searchText else {
+                    print("没有 searchText")
+                    return
+                }
+
+                print("searchText is \(searchText)")
+                if searchText.count > 0 {
+                    resultVc.searchText = searchText
+                    resultVc.page = 1
+                    resultVc.resultBookInfos = []
+                    resultVc.loadData()
+                }
+            }
+            guard let vc = vc else {
+                return
+            }
+            vc.delegate = resultVc
+            vc.hotSearchStyle = .colorfulTag
+            vc.searchHistoryStyle = .cell
+            vc.showHotSearch = true
+            vc.showSearchHistory = true
+            vc.searchResultShowMode = .push
+            vc.searchResultController = resultVc
+            vc.searchViewControllerShowMode = .modePush
+
             navigationController?.pushViewController(vc, animated: true)
         }
     }

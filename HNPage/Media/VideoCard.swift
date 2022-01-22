@@ -9,7 +9,7 @@ import LCDSDK
 import UIKit
 
 class VideoCard: UIViewController {
-    var cardType: LCDVideoCardType = .typeDefault
+    var cardType: LCDVideoCardType!
     let element = LCDVideoCardProvider.shared().buildViewElement()
     let cardView = LCDVideoCardProvider.shared().buildView()
 

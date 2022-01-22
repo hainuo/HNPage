@@ -29,6 +29,7 @@
 		FCDB9C48278ED7EC00B8BF17 /* ChenjinshiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9C47278ED7EC00B8BF17 /* ChenjinshiVC.swift */; };
 		FCDB9C4D278EEEB400B8BF17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDB9C4B278EEEB400B8BF17 /* Main.storyboard */; };
 		FCDB9C50278EF16B00B8BF17 /* MediaTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9C4F278EF16B00B8BF17 /* MediaTVC.swift */; };
+		FCE28E4D27995298000A493B /* NovelSearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE28E4C27995298000A493B /* NovelSearchResultVC.swift */; };
 		FCED6C8F278FF12D006187CA /* NovelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED6C8E278FF12D006187CA /* NovelTVC.swift */; };
 		FCED6C91278FF245006187CA /* JiugonggeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED6C90278FF245006187CA /* JiugonggeVC.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +48,7 @@
 		FC3479A4278D65DA0060E220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3479A7278D65DA0060E220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3479A9278D65DA0060E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC3479B0278D6DD40060E220 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		FC3479B0278D6DD40060E220 /* HNPage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HNPage-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC3479B1278D78B30060E220 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FC3479B3278D7BB40060E220 /* SDK_Setting_5258348.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SDK_Setting_5258348.json; sourceTree = "<group>"; };
 		FCBA2BC727911E37006A2D9B /* VideoCardSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCardSingle.swift; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		FCDB9C47278ED7EC00B8BF17 /* ChenjinshiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChenjinshiVC.swift; sourceTree = "<group>"; };
 		FCDB9C4C278EEEB400B8BF17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCDB9C4F278EF16B00B8BF17 /* MediaTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTVC.swift; sourceTree = "<group>"; };
+		FCE28E4C27995298000A493B /* NovelSearchResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelSearchResultVC.swift; sourceTree = "<group>"; };
 		FCED6C8E278FF12D006187CA /* NovelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelTVC.swift; sourceTree = "<group>"; };
 		FCED6C90278FF245006187CA /* JiugonggeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiugonggeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +100,7 @@
 		FC34798C278D65D80060E220 = {
 			isa = PBXGroup;
 			children = (
-				FC3479B0278D6DD40060E220 /* Bridging-Header.h */,
+				FC3479B0278D6DD40060E220 /* HNPage-Bridging-Header.h */,
 				FC347997278D65D80060E220 /* HNPage */,
 				FC347996278D65D80060E220 /* Products */,
 				18DA8A2D1D561CB3F51422BE /* Pods */,
@@ -206,6 +208,7 @@
 			children = (
 				FCED6C8E278FF12D006187CA /* NovelTVC.swift */,
 				FC2B3F222796B9910050C157 /* NovelEntranceVC.swift */,
+				FCE28E4C27995298000A493B /* NovelSearchResultVC.swift */,
 			);
 			path = Novel;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				FCDB9C48278ED7EC00B8BF17 /* ChenjinshiVC.swift in Sources */,
 				FCBA2BCA27915C4C006A2D9B /* VideoCard.swift in Sources */,
 				FC3479A3278D65D80060E220 /* HNPage.xcdatamodeld in Sources */,
+				FCE28E4D27995298000A493B /* NovelSearchResultVC.swift in Sources */,
 				FCDB9C50278EF16B00B8BF17 /* MediaTVC.swift in Sources */,
 				FC2B3F212796AA300050C157 /* FeedSingleVC.swift in Sources */,
 				FCED6C8F278FF12D006187CA /* NovelTVC.swift in Sources */,
@@ -550,7 +554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = DEVELOP;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "HNPage-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -584,7 +588,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = TijiaoKuaimaerweima;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "HNPage-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

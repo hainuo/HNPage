@@ -22,6 +22,7 @@ PODS:
   - CoreStore (8.1.0)
   - FMDB/standard (2.7.5)
   - HandyJSON (5.0.2)
+  - Kingfisher (7.1.2)
   - MBProgressHUD (1.2.0)
   - MMKV (1.2.12):
     - MMKVCore (~> 1.2.12)
@@ -75,6 +76,7 @@ PODS:
     - RangersAppLog/Core (~> 6.3.2)
     - RangersAppLog/Host/CN (~> 6.3.2)
     - RangersAppLog/Log (~> 6.3.2)
+  - PYSearch (0.9.1)
   - RangersAPM/CN (2.4.1):
     - RangersAPM/Core
     - RangersAPM/Public
@@ -107,10 +109,12 @@ DEPENDENCIES:
   - Ads-CN (~> 4.2.0.0)
   - CoreStore (~> 8.0)
   - HandyJSON (~> 5.0.2)
+  - Kingfisher (~> 7.0)
   - MBProgressHUD (~> 1.2.0)
   - Moya (~> 14.0)
   - Pangrowth/media-dynamic (= 1.8.0.0)
   - Pangrowth/novel (= 1.8.0.0)
+  - PYSearch
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -119,10 +123,12 @@ SPEC REPOS:
     - CoreStore
     - FMDB
     - HandyJSON
+    - Kingfisher
     - MBProgressHUD
     - MMKV
     - MMKVCore
     - Moya
+    - PYSearch
     - YYCache
     - YYText
   https://github.com/volcengine/volcengine-specs.git:
@@ -140,6 +146,7 @@ SPEC CHECKSUMS:
   CoreStore: 497ade3103f1ffd95d09c2658f9008d10c7d3082
   FMDB: 89f705eb43d6a2af8795a9d0b4613e03f33fb7ba
   HandyJSON: b3674b4faf44f867612c2c2f5c44759026cd3103
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   MBProgressHUD: 4acba3cb8da37dc157aaf5a5dfa53045b90c7c52
   MMKV: f281020c9d9be5eb7a03ae746dc4deb570e46c23
   MMKVCore: df0565f6b58463604731a68ba6cd89bc0b2d1d55
@@ -147,11 +154,12 @@ SPEC CHECKSUMS:
   OneKit: b7b9d829c37beae5deb45786fb7e437fcba5093d
   Pangrowth: 21e4ddfdc1a909379d7303212726815c73b072be
   PangrowthMedia-dynamic: 1a0df9343174e5e703c7fb24416617181c4602db
+  PYSearch: 00d802af164870b06908284f2a5e9a1ae7e0363f
   RangersAPM: fbcba8c380e5513f46486ed9f94f57feb6840a37
   RangersAppLog: d2eca818b509a6b6d1bc28b95266baf6b0fe4cb2
   YYCache: 5eadab13c6e585b65bc66fa537b8d946106b4cd6
   YYText: 23b00e89de6f7aae8a819627a12d4ba96889ece5
 
-PODFILE CHECKSUM: 567940baf2a624a490f5da65f2585d30ce13f721
+PODFILE CHECKSUM: 224a83fca092d1b9511c9b58bd424dbfb71fff79
 
 COCOAPODS: 1.11.2
